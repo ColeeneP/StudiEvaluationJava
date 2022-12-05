@@ -10,7 +10,7 @@ import com.bibliotheque.api.repository.GenreRepository;
 
 @Service
 public class GenreService {
-    @Autowired
+
     private GenreRepository genreRepository;
 
 

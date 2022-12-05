@@ -7,7 +7,7 @@ import com.bibliotheque.api.model.Langue;
 
 @Service
 public class LangueService {
-    @Autowired
+
     private LangueRepository langueRepository;
 
 

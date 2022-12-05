@@ -11,7 +11,7 @@ import java.util.Optional;
 @Service
 public class AuteurService {
 
-    @Autowired
+
     private AuteurRepository auteurRepository;
 
     public Optional<Auteur> getAuteur(final Integer id) {

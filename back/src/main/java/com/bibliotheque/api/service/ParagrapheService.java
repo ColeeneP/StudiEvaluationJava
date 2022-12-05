@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ParagrapheService {
-    @Autowired
+
     private ParagrapheRepository paragrapheRepository;
 
 

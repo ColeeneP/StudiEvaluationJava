@@ -11,7 +11,7 @@ import com.bibliotheque.api.repository.DescriptionRepository;
 @Service
 public class DescriptionService {
 
-    @Autowired
+
     private DescriptionRepository descriptionRepository;
 
 

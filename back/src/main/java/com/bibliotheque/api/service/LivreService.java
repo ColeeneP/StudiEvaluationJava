@@ -10,15 +10,16 @@ import com.bibliotheque.api.repository.LivreRepository;
 
 @Service
 public class LivreService {
+
     @Autowired
     private LivreRepository livreRepository;
-
 
     public Optional<Livre> getLivre(final String isbn) {
         return livreRepository.findById(isbn);
     }
 
     public Iterable<Livre> getLivre() {
+        System.out.println("step two");
         return livreRepository.findAll();
     }
     

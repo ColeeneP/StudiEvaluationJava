@@ -10,7 +10,7 @@ import com.bibliotheque.api.repository.ExemplaireRepository;
 
 @Service
 public class ExemplaireService {
-    @Autowired
+
     private ExemplaireRepository exemplaireRepository;
 
 

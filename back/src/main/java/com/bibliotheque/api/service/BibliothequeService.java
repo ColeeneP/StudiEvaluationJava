@@ -8,7 +8,7 @@ import com.bibliotheque.api.repository.BibliothequeRepository;
 
 @Service
 public class BibliothequeService {
-    @Autowired
+
     private BibliothequeRepository bibliothequeRepository;
 
 

@@ -9,7 +9,7 @@ import com.bibliotheque.api.repository.PretRepository;
 
 @Service
 public class PretService {
-    @Autowired
+
     private PretRepository pretRepository;
 
 

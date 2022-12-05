@@ -10,7 +10,7 @@ import com.bibliotheque.api.repository.UtilisateurRepository;
 @Service
 public class UtilisateurService {
 
-    @Autowired
+
     private UtilisateurRepository utilisateurRepository;
 
 

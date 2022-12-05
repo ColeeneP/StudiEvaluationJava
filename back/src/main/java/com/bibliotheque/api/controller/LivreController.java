@@ -20,6 +20,7 @@ public class LivreController {
      */
     @GetMapping("/livre")
     public Iterable<Livre> getLivre() {
+        System.out.println("step one");
         return livreService.getLivre();
     }
 

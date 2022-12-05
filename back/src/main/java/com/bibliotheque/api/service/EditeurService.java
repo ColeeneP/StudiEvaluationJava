@@ -10,7 +10,7 @@ import com.bibliotheque.api.repository.EditeurRepository;
 
 @Service
 public class EditeurService {
-    @Autowired
+
     private EditeurRepository editeurRepository;
 
 
