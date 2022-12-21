@@ -9,7 +9,7 @@ public class Auteur {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @OneToOne
-    private int id;
+    private Integer id;
 
     @Column(name="nom")
     private String nom;

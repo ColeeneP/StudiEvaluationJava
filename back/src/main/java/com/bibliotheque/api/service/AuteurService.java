@@ -18,7 +18,7 @@ public class AuteurService {
         return auteurRepository.findById(id);
     }
 
-    public Iterable<Auteur> getAuteur() {
+    public Iterable<Auteur> getAllAuteur() {
         return auteurRepository.findAll();
     }
 

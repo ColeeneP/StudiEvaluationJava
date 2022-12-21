@@ -1,5 +1,6 @@
 package com.bibliotheque.api.service;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -9,18 +10,9 @@ import com.bibliotheque.api.model.Livre;
 import com.bibliotheque.api.repository.LivreRepository;
 
 @Service
-public class LivreService {
+public interface LivreService {
 
-    @Autowired
-    private LivreRepository livreRepository;
+    public Optional<Livre> getLivre(final String isbn);
 
-    public Optional<Livre> getLivre(final String isbn) {
-        return livreRepository.findById(isbn);
-    }
-
-    public Iterable<Livre> getLivre() {
-        System.out.println("step two");
-        return livreRepository.findAll();
-    }
-    
+    public List<Livre> getAllLivre();
 }

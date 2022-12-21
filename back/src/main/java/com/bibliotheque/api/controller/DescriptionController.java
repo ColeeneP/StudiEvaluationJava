@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -11,6 +12,7 @@ import com.bibliotheque.api.model.Description;
 import com.bibliotheque.api.service.DescriptionService;
 
 @RestController
+@RequestMapping(ApiRegistration.REST_PREFIX + ApiRegistration.REST_DESCRIPTION)
 public class DescriptionController {
     
     @Autowired

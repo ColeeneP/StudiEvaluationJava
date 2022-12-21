@@ -9,6 +9,7 @@ import com.bibliotheque.api.model.Livre;
 import com.bibliotheque.api.service.LivreService;
 
 @RestController
+@RequestMapping(ApiRegistration.REST_PREFIX + ApiRegistration.REST_LIVRE)
 @CrossOrigin
 public class LivreController {
     @Autowired
@@ -18,10 +19,10 @@ public class LivreController {
      * Read - Get all books
      * @return - An Iterable object of Books full filled
      */
-    @GetMapping("/livre")
-    public Iterable<Livre> getLivre() {
+    @GetMapping
+    public Iterable<Livre> getAllLivre() {
         System.out.println("step one");
-        return livreService.getLivre();
+        return livreService.getAllLivre();
     }
 
     /**
@@ -29,7 +30,7 @@ public class LivreController {
      * @param isbn The isbn of the book
      * @return An Book object full filled
      */
-    @GetMapping("/livre/{isbn}")
+    @GetMapping("{isbn}")
     public Livre getLivre(@PathVariable("isbn") final String isbn) {
         Optional<Livre> livre = livreService.getLivre(isbn);
         if(livre.isPresent()) {

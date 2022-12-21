@@ -12,6 +12,7 @@ import com.bibliotheque.api.model.Utilisateur;
 import com.bibliotheque.api.service.UtilisateurService;
 
 @RestController
+@RequestMapping(ApiRegistration.REST_PREFIX + ApiRegistration.REST_UTILISATEUR)
 public class UtilisateurController {
     @Autowired
     private UtilisateurService utilisateurService;
@@ -20,7 +21,7 @@ public class UtilisateurController {
      * Read - Get all users
      * @return - An Iterable object of Users full filled
      */
-    @GetMapping("/utilisateur")
+    @GetMapping
     public Iterable<Utilisateur> getUtilisateur() {
         return utilisateurService.getUtilisateur();
     }
@@ -30,7 +31,7 @@ public class UtilisateurController {
      * @param id The id of the user
      * @return An User object full filled
      */
-    @GetMapping("/utilisateur/{id}")
+    @GetMapping("{id}")
     public Utilisateur getUtilisateur(@PathVariable("id") final Integer id) {
         Optional<Utilisateur> utilisateur = utilisateurService.getUtilisateur(id);
         if(utilisateur.isPresent()) {
@@ -40,7 +41,7 @@ public class UtilisateurController {
         }
     }
 
-    @PostMapping("/utilisateur")
+    @PostMapping
     public ResponseEntity<Utilisateur> create(@RequestBody Utilisateur newUtilisateur) throws ServerException {
         Utilisateur utilisateur = utilisateurService.saveUtilisateur(newUtilisateur);
         if (utilisateur == null) {
