@@ -12,7 +12,7 @@ import com.bibliotheque.api.repository.LivreRepository;
 @Service
 public interface LivreService {
 
-    public Optional<Livre> getLivre(final String isbn);
+    Livre getLivre(final String isbn);
 
-    public List<Livre> getAllLivre();
+    List<Livre> getAllLivre();
 }

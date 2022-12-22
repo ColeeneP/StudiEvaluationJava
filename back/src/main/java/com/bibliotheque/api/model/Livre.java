@@ -1,15 +1,14 @@
 package com.bibliotheque.api.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "livre")
 public class Livre {
 
     @Id
-    @OneToOne
-    @JoinColumn(name = "isbn")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="isbn")
     private String isbn;
 
     @Column(name="titre")
@@ -66,6 +65,15 @@ public class Livre {
         return langue;
     }
     public void setLangue(String langue) {
+        this.langue = langue;
+    }
+
+    public Livre(String isbn, String titre, String editeur_id, String date_publication, int description_id, String langue, List<Livre> livreList) {
+        this.isbn = isbn;
+        this.titre = titre;
+        this.editeur_id = editeur_id;
+        this.date_publication = date_publication;
+        this.description_id = description_id;
         this.langue = langue;
     }
 }

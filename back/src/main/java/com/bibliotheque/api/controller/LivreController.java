@@ -1,5 +1,6 @@
 package com.bibliotheque.api.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +18,10 @@ public class LivreController {
 
     /**
      * Read - Get all books
-     * @return - An Iterable object of Books full filled
+     * @return - A List of Books full filled
      */
     @GetMapping
-    public Iterable<Livre> getAllLivre() {
-        System.out.println("step one");
+    public List<Livre> getAllLivre() {
         return livreService.getAllLivre();
     }
 
@@ -32,12 +32,7 @@ public class LivreController {
      */
     @GetMapping("{isbn}")
     public Livre getLivre(@PathVariable("isbn") final String isbn) {
-        Optional<Livre> livre = livreService.getLivre(isbn);
-        if(livre.isPresent()) {
-            return livre.get();
-        } else {
-            return null;
-        }
+        return livreService.getLivre(isbn);
     }
     
 }
